@@ -13,6 +13,7 @@ Vue.use(Router)
 
 const routes = [
   { path: "/", component: index, redirect: '/index/Home' },
+  // { path: "/", component: index, redirect: '/index/News' },
   {
     path: '/index', component: index, redirect: '/index/Home',
     children: [
@@ -24,7 +25,11 @@ const routes = [
 
     ],
   },
-  { path: "/index/News/NewsDetails/:id", component: NewsDetails },
+  { 
+    path: "/index/News/NewsDetails/:id",
+    component: NewsDetails,
+    name:'NewsDetails',
+   },
 ];
 
 export default new Router({

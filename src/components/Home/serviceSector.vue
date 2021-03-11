@@ -21,9 +21,33 @@ export default {
   data() {
     //这里存放数据
     return {
+      serviceSector:{
+          title:'服务领域',
+          Subtitle:'SERVICE AREA',
+          SmainText:[
+            {
+              id:0,
+              icon:'../../../static/Home/serviceSector/up_icon.png',
+              title:'建筑工程',
+              text:'建筑工程项目包括工程建设项目、单项工程、单位工程、分部工程、分项工程。建设项指具有一个设计任务书和总体设计，经济上实行独立核算，管理上具有独立组织形式的工程建设项目。一个建设项目往往由一个或几个单项工程组成。'
+            },
+            {
+              id:1,
+              icon:'../../../static/Home/serviceSector/s_icon.png',
+              title:'水利工程',
+               text:'水利工程是用于控制和调配自然界的地表水和地下水，达到除害兴利目的而修建的工程。只有修建水利工程，才能控制水流，防止洪涝灾害，并进行水量的调节和分配，以满足人民生活和生产对水资源的需要。'
+            },
+            {
+              id:2,
+              icon:'../../../static/Home/serviceSector/hb_icon.png',
+              title:'环保工程',
+               text:'环保工程是指特定为环境保护所做的工程，由于工业发展导致环境污染，而以某组设想目标为依据，应用有关的科学知识和技术手段，通过一群人的有组织活动将环境污染问题去处理解决的一些工程。'
+            },
+          ],
+        },
     };
   },
-  props:["serviceSector"],
+  // props:["serviceSector"],
 };
 </script>
 <style  scoped>
@@ -72,7 +96,8 @@ export default {
   float: left;
   width: 265px;
   height: 500px;
-  padding: 0 40px;
+  padding: 10px 40px;
+  overflow: hidden;
 }
 
 .serviceBody li:hover img{
@@ -87,8 +112,10 @@ export default {
   cursor: pointer;
 }
 .serviceBody li:nth-child(2){
+  
   background-color: #202c2c;
   cursor: pointer;
+
 }
 .serviceBody li:nth-child(3){
   background-color: #1c2828;

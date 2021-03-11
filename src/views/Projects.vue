@@ -38,5 +38,10 @@ return {
   height: 100%;
   position: relative;
   background: #fffcfc7a;
+  background: url(https://s-14587.f.cdn-static.cn/14587_15762188939502.jpg?imageMogr2/thumbnail/2285x2000/q/75)
+    repeat-y center bottom;
+  background-attachment: fixed;
 }
+
+
 </style>

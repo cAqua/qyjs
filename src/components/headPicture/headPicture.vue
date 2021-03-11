@@ -4,7 +4,7 @@
     <div class="Projects_img">
       <img :src="this.cover" alt />
       <div class="Projects_txt">{{title}}</div>
-      <div class="Projects_txts">{{tile}}</div>
+      <!-- <div class="Projects_txts">{{tile}}</div> -->
     </div>
   </div>
 </template>
@@ -20,7 +20,28 @@ export default {
   data() {
     //这里存放数据
     return {
-      arrs: [], //存放头部组件的数据
+      arrs: [
+        {
+          cover:'../../../static/headPicture/1.jpg',
+          title:'关于我们',
+          tile:'AboutUs'
+        },
+        {
+          cover:'../../../static/headPicture/2.jpg',
+          title:'项目展示',
+          tile:'project display '
+        },
+        {
+          cover:'../../../static/headPicture/3.jpg',
+          title:'新闻中心',
+          tile:'journalism'
+        },
+        {
+          cover:'../../../static/headPicture/4.jpg',
+          title:'联系我们',
+          tile:'contact us'
+        },
+      ], //存放头部组件的数据
       cover: "", //图片
       title: "", //z中文文字
       tile: "", //英文文字
@@ -38,19 +59,19 @@ export default {
       this.$fn(api);
     },
     cachae() {
-      let des = JSON.parse(localStorage.getItem("weone"));
-      if (!des) {
-        //  不存在数据就发送请求
-        console.log("没请求");
-        this.getup();
-      } else {
-        //  有旧的数据 定义过期时间为2小时  过期再次请求
-        if (Date.now() - des.time > 7200000) {
-          this.getup();
-        } else {
-          // 可以使用旧的数据
-          console.log("可以使用旧数据");
-          this.arrs = des.data;
+      // let des = JSON.parse(localStorage.getItem("weone"));
+      // if (!des) {
+      //   //  不存在数据就发送请求
+      //   console.log("没请求");
+      //   this.getup();
+      // } else {
+      //   //  有旧的数据 定义过期时间为2小时  过期再次请求
+      //   if (Date.now() - des.time > 7200000) {
+      //     this.getup();
+      //   } else {
+      //     // 可以使用旧的数据
+      //     console.log("可以使用旧数据");
+          // this.arrs = des.data;
           for (let i = 0; i < this.arrs.length; i++) {
             switch (
               this.$route.path //匹配路由的对应值是该组件重复使用
@@ -61,6 +82,8 @@ export default {
                   this.cover = this.arrs[this.num].cover;
                   this.title = this.arrs[this.num].title;
                   this.tile = this.arrs[this.num].tile;
+                 
+
                 }
                 break;
               case "/index/Projects":
@@ -88,8 +111,8 @@ export default {
                 }
             }
           }
-        }
-      }
+    //     }
+    //   }
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）

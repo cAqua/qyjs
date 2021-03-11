@@ -1,19 +1,21 @@
 <!-- 画廊领域 -->
 <template>
-
-  <div class='se' >
-  <div class="PhotFrameTitle w">
-    <h1 style="font-size:48px;color:white">印度事实画廊</h1>
-    <em style="font-size:22px; margin-bottom:50px;">Industrial Revolution Business</em>
+  <div class="se">
+    <div class="PhotFrameTitle w">
+      <h1 style="font-size: 48px; color: white">工程业绩</h1>
+      <em style="font-size: 22px; margin-bottom: 50px"
+        >PROJECT PERFORMANCE</em
+      >
+    </div>
+    <div class="w" style="height: 30px"></div>
+    <ul class="PhotFrame w" id="image">
+      <!-- @click="sse()" -->
+      <li v-for="(item,index) in gallery" :key=index :data-index=index>
+        <i class="Pmask" style="">{{ item.title }}</i>
+        <img :src="item.cover" alt="" />
+      </li>
+    </ul>
   </div>
-  <div class="w" style="height:30px;"></div>
-  <ul class="PhotFrame w" id="image" ><!-- @click="sse()" -->
-    <li v-for="item in gallery" :key="item.id" :data-index="item.id">
-        <i class="Pmask" style="">{{item.title}}</i>
-        <img :src="item.cover" alt="">
-    </li>
-  </ul>
-</div>
 </template>
 
 <script>
@@ -25,9 +27,71 @@ export default {
   data() {
     //这里存放数据
     return {
+      gallery: [
+        {
+          id: 0,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548301158959178.jpg",
+        },
+        {
+          id: 1,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548301243361467.jpg",
+        },
+        {
+          id: 2,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548301344140834.jpg",
+        },
+        {
+          id: 3,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548302153626284.jpg",
+        },
+        {
+          id: 4,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548302171957887.jpg",
+        },
+        {
+          id: 5,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548309927470853.jpg",
+        },
+        {
+          id: 6,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548309949120613.jpg",
+        },
+        {
+          id: 7,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548311323135958.jpg",
+        },
+        {
+          id: 7,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548301277100986.jpg",
+        },
+        {
+          id: 7,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548301321626757.jpg",
+        },
+        {
+          id: 7,
+          title: "标题",
+          cover: "../../../static/Home/Industry/abt_tubg.jpg",
+        },
+        {
+          id: 7,
+          title: "标题",
+          cover: "../../../static/Home/Industry/1548311301993603.jpg",
+        },
+      ],
     };
   },
-  props:['gallery'],
+  // props:['gallery'],
   methods: {
     sse() {
       const viewer = new Viewer(document.getElementById("image"), {
@@ -44,11 +108,10 @@ export default {
         // toggleOnDblclick:true,
         viewed() {
           viewer.zoomTo(1);
-        }
+        },
       });
-    }
+    },
   },
-
 };
 </script>
 <style  scoped >

@@ -1,12 +1,12 @@
 <!-- 工业界组件 -->
 <template >
   <div class="industs">
-    <div class="industs_content" v-if="Industry">
+    <div class="industs_content">
       <!-- 标题 -->
       <div class="industs_content_title">
-        <p>{{Industry[0].title}}</p>
+        <p>{{ Industry.title }}</p>
         <p>
-          <em>{{Industry[0].title_els}}</em>
+          <em>{{ Industry.title_els }}</em>
         </p>
       </div>
       <div class="industs_content_title"></div>
@@ -14,20 +14,24 @@
       <div class="industs_Picture_content">
         <!-- 左边图片 -->
         <div class="industs_Picture">
-          <img :src="Industry[0].cover" alt />
+          <img :src="Industry.cover"  />
         </div>
         <!-- 右边文字 -->
         <div class="industs_content_right">
-          <div class="First_content">{{Industry[0].favnum}}</div>
-          <div class="Second_content" v-for="item in Industry[0].titleText" :key="item.id">
+          <div class="First_content">{{ Industry.favnum }}</div>
+          <div
+            class="Second_content"
+            v-for="(item,index) in Industry.titleText"
+            :key="index"
+          >
             <div class="Second_content_ico">
-              <i :class="item.icon"></i>
+              <img :src="item.icon" />
             </div>
             <div class="Second_content_p">
-              <p>{{item.title}}</p>
+              <p>{{ item.title }}</p>
             </div>
             <div class="Second_content_p2">
-              <p>{{item.text}}</p>
+              <p>{{ item.text }}</p>
             </div>
           </div>
         </div>
@@ -40,9 +44,38 @@
 export default {
   data() {
     //这里存放数据
-    return {};
+    return {
+      Industry: {
+          title: "公司简介",
+          title_els: "company introduction ",
+          cover:'../../../static/Home/gallery/master.png',
+          favnum:'NUlla pellentesque mi non laoreet eleifend . integer prottitor mollisar lorem,at molestie arcu pulvinar ut, Proin ac fermentum est. Cras miipsum,consecterur ac ipsun in,egestas vestibulum tellus.',
+          titleText:[
+            {
+              id:0,
+              icon:'../../../static/Home/gallery/team.png',
+              title:'INDUSTRIAL BUSHINESS',
+              text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
+            },
+            {
+              id:0,
+              icon:'../../../static/Home/gallery/time.png',
+              title:'24/7 support',
+              text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
+            },
+            {
+              id:0,
+              icon:'../../../static/Home/gallery/industrial.png',
+              title:'PROFESSIONAL TEAM',
+              text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
+            },
+          ]
+        },
+      
+    };
   },
-  props: ["Industry"]
+  created() {},
+  // props: ["Industry"]
 };
 </script>
 <style  scoped>
@@ -50,7 +83,7 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 .industs_content {
   width: 1200px;
@@ -92,10 +125,11 @@ export default {
   float: left;
   position: relative;
   background: rosybrown;
+  overflow: hidden;
 }
 .industs_Picture img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 .industs_content_right {
   width: 613px;
@@ -104,7 +138,7 @@ export default {
   position: relative;
   left: -84px;
   top: 38px;
-  border: 5px solid #f85a40;
+  border: 5px solid#f85a40;
   padding-left: 70px;
   padding-top: 35px;
 }
@@ -130,13 +164,13 @@ export default {
 .Second_content_ico {
   width: 55px;
   height: 55px;
-  position: relative;
+  display: flex;
   float: left;
   margin-right: 10px;
   background: #f85a40;
   top: 5px;
 }
-.Second_content_ico i {
+.Second_content_ico img {
   font-size: 22px;
   width: 55px;
   height: 55px;
@@ -144,6 +178,23 @@ export default {
   background: #f85a40;
   color: #fff;
   text-align: center;
+/* .Second_content_ico {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  background: #f85a40;
+  top: 5px;
+}
+.Second_content_ico img {
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  background: #f85a40;
+  color: #fff;
+  text-align: center; */
 }
 .Second_content_p p {
   width: 445px;

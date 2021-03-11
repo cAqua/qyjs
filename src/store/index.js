@@ -7,6 +7,7 @@ Vue.use(Vuex)
 //创建VueX对象
 const store =  new Vuex.Store({
     state:{
+      mainList:[],
         //存放的键值对就是所要管理的状态
         // Industry:'' ,  //工业界数据
         // serviceSector:'',    //服务数据
