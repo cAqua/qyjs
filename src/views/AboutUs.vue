@@ -1,6 +1,6 @@
 <!-- 关于我们 -->
 <template>
-<div class='' style="">
+<div class='AboutUs' >
   <!-- 轮播图组件 -->
    <headPicture/>
    <!-- 介绍组件 -->
@@ -30,6 +30,14 @@ export default {
 </script>
 <style  scoped>
 body {
-  height: 3000px
+}
+.AboutUs{
+  width: 100%;
+  height: 100%;
+  background: #fffcfc7a;
+  background: url(../assets/AboutUs/background-Image.jpg)
+  repeat-Y center bottom;
+  background-attachment: fixed;
+  background-size: 100%;
 }
 </style>

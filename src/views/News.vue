@@ -1,6 +1,6 @@
 <!-- 新闻中心 -->
 <template>
-  <div class="">
+  <div class="News">
     <!-- 头部图片 -->
     <headPicture />
     <!-- 中间内容 -->
@@ -13,6 +13,7 @@
           :key="item.id"
           @click="News_details_page(item.id)"
           :data-index="item.id"
+          class="contentLi"
         >
           <div class="contentBox">
             <div class="image">
@@ -55,7 +56,7 @@ export default {
         {
           title: "上海住房城乡建设系统助力打造国际一流营商环境",
           time: "2019-01-04 13:54:08",
-          cover: "../../../static/News/1.jpg",
+          cover: require("../assets/News/1.jpg"),
           text: [
             {
               text:
@@ -70,7 +71,7 @@ export default {
         },
         {
           title: "上海建交系统“迎进口博览会 展文明窗口风采”创建活动回顾",
-          cover: "../../../static/News/2.png",
+          cover: require("../assets/News/2.png"),
           text: [
             {
               text:
@@ -86,7 +87,7 @@ export default {
         },
         {
           title: "宁波市创建国家园林城市纪实",
-          cover: "../../../static/News/3.jpg",
+          cover: require("../assets/News/3.jpg"),
           text: [
             {
               text:
@@ -102,7 +103,7 @@ export default {
         },
         {
           title: "汕 头：因地制宜 因势利导 让垃圾分类成为居民生活好习惯",
-          cover: "../../../static/News/4.jpg",
+          cover: require("../assets/News/4.jpg"),
           text: [
             {
               text:
@@ -118,7 +119,7 @@ export default {
         },
         {
           title: "东 莞：“三个突出”扎实推进生活垃圾分类工作",
-          cover: "../../../static/News/5.jpg",
+          cover: require("../assets/News/5.jpg"),
           text: [
             {
               text:
@@ -134,7 +135,7 @@ export default {
         },
         {
           title: "深 圳：稳扎稳打构建四大体系 精益求精强化示范效果",
-          cover: "../../../static/News/6.jpg",
+          cover: require("../assets/News/6.jpg"),
           text: [
             {
               text:
@@ -191,6 +192,10 @@ export default {
 };
 </script>
 <style  scoped>
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -211,6 +216,7 @@ export default {
   width: 49%;
   height: auto;
   cursor: pointer;
+
 }
 .content li:hover {
   cursor: pointer;
@@ -226,6 +232,7 @@ export default {
   height: 159px;
   float: left;
   border: 1px solid #eeeeee;
+  background-color: #fff;
   border-radius: 5px;
 }
 .content .image {

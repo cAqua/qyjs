@@ -21,19 +21,19 @@ export default {
       imgs: [
         {
           id: 0,
-          cover: "../../../static/Home/lunbo/5c4eb2100f15d.jpg",
+          cover: require("../../assets/home/lunbo/5c4eb2100f15d.jpg"),
           title: " ",
           tile: " ",
         },
         {
           id: 0,
-          cover: "../../../static/Home/lunbo/5c4eb3bf67c39.jpg",
+          cover:require("../../assets/home/lunbo/5c4eb3bf67c39.jpg"),
           title: " ",
           tile: " ",
         },
         {
           id: 0,
-          cover: "../../../static/Home/lunbo/5c4eb5b83639a.jpg",
+          cover:require("../../assets/home/lunbo/5c4eb5b83639a.jpg"),
           title: " ",
           tile: " ",
         },

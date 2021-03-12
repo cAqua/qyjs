@@ -22,22 +22,22 @@ export default {
     return {
       arrs: [
         {
-          cover:'../../../static/headPicture/1.jpg',
+          cover:require('../../assets/headPicture/1.jpg'),
           title:'关于我们',
           tile:'AboutUs'
         },
         {
-          cover:'../../../static/headPicture/2.jpg',
+          cover:require('../../assets/headPicture/2.jpg'),
           title:'项目展示',
           tile:'project display '
         },
         {
-          cover:'../../../static/headPicture/3.jpg',
+          cover:require('../../assets/headPicture/3.jpg'),
           title:'新闻中心',
           tile:'journalism'
         },
         {
-          cover:'../../../static/headPicture/4.jpg',
+          cover:require('../../assets/headPicture/4.jpg'),
           title:'联系我们',
           tile:'contact us'
         },
@@ -135,13 +135,14 @@ export default {
   width: 100%;
   position: relative;
   height: 100%;
-  padding-top: 20px;
-  margin-bottom: 20px;
+  /* padding-top: 20px; */
+  /* margin-bottom: 20px; */
 }
 .Projects_img {
-  width: 100%;
+  width: 100%;  
   position: relative;
   height: 600px;
+  overflow: hidden;
 }
 .Projects_img img {
   width: 100%;

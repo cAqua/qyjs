@@ -6,54 +6,54 @@
         <li class="ProjectsMap_show act">
           <div class="project_img" v-for="item in oneArticle" :key="item.id">
             <div class="project_content">
-            <img v-lazy="item.cover" alt />
-            <div class="project_text" :title=item.description>
-              <p>{{ item.title }}</p>
-              <p>
-                <span>项目地点:</span>
-                {{ item.ProjectLocation }}
-              </p>
-              <p>
-                <span>项目内容:</span>
-                {{ item.description }}
-              </p>
-            </div>
+              <img v-lazy="item.cover" alt />
+              <div class="project_text" :title="item.description">
+                <p>{{ item.title }}</p>
+                <p>
+                  <span>项目地点:</span>
+                  {{ item.ProjectLocation }}
+                </p>
+                <p>
+                  <span>项目内容:</span>
+                  {{ item.description }}
+                </p>
+              </div>
             </div>
           </div>
         </li>
         <li class="ProjectsMap_show">
           <div class="project_img" v-for="item in towArticle" :key="item.id">
             <div class="project_content">
-            <img v-lazy="item.cover" alt />
-            <div class="project_text" :title=item.description>
-              <p>{{ item.title }}</p>
-              <p>
-                <span>项目地点:</span>
-                {{ item.ProjectLocation }}
-              </p>
-              <p>
-                <span>项目内容:</span>
-                {{ item.description }}
-              </p>
-            </div>
+              <img v-lazy="item.cover" alt />
+              <div class="project_text" :title="item.description">
+                <p>{{ item.title }}</p>
+                <p>
+                  <span>项目地点:</span>
+                  {{ item.ProjectLocation }}
+                </p>
+                <p>
+                  <span>项目内容:</span>
+                  {{ item.description }}
+                </p>
+              </div>
             </div>
           </div>
         </li>
         <li class="ProjectsMap_show">
           <div class="project_img" v-for="item in threeArticle" :key="item.id">
             <div class="project_content">
-            <img v-lazy="item.cover" alt />
-            <div class="project_text" :title=item.description>
-              <p>{{ item.title }}</p>
-              <p>
-                <span>项目地点:</span>
-                {{ item.ProjectLocation }}
-              </p>
-              <p>
-                <span>项目内容:</span>
-                {{ item.description }}
-              </p>
-            </div>
+              <img v-lazy="item.cover" alt />
+              <div class="project_text" :title="item.description">
+                <p>{{ item.title }}</p>
+                <p>
+                  <span>项目地点:</span>
+                  {{ item.ProjectLocation }}
+                </p>
+                <p>
+                  <span>项目内容:</span>
+                  {{ item.description }}
+                </p>
+              </div>
             </div>
           </div>
         </li>
@@ -81,14 +81,14 @@ export default {
       arr: [], //请求的数据
       oneArticle: [
         {
-          cover: "../../../static/Projects/1.png",
+          cover: require("../../assets/Projects/1.png"),
           title: "广州市白云沙亭岗新社区棚改项目",
           ProjectLocation: "广州市白云区太和镇沙亭岗村与谢家庄村交界处",
           description:
             "本项目建设地点位于广州市白云区太和镇沙亭岗村与谢家庄村交界处，总建筑面积1001827.41㎡，计算容积率建筑面积为750924.96平方米，包括住宅、教育配套、公共配套及非公建配套；不计算容积率建筑面积为250902.45平方米，主要为地下车库及架空层。其中教育配套用地48994.16平方米，建筑面积为45854.41平方米，计算容积率建筑面积为40684.0平方米。",
         },
         {
-          cover: "../../../static/Projects/2.jpg",
+          cover: require("../../assets/Projects/2.jpg"),
           title: "广东省中医院南沙医院项目",
           ProjectLocation: "粤港澳大湾区南沙区域",
           description:
@@ -97,7 +97,7 @@ export default {
       ], //截取数据的两条
       towArticle: [
         {
-          cover: "../../../static/Projects/3.png",
+          cover: require("../../assets/Projects/3.png"),
           title: "广州知识城大厦项目",
           ProjectLocation:
             "新广州知识城南起步区九龙大道以西、凤凰湖东侧。项目总用地面积55672平方米",
@@ -105,7 +105,7 @@ export default {
             "本工程A栋建筑高度69.8米，地上共16层，2层裙楼，地下2层；总建筑面积190669平方米，其中地下建筑面积75133.7平方米，地上建筑面积115535.3平方米。",
         },
         {
-          cover: "../../../static/Projects/4.jpg",
+          cover: require("../../assets/Projects/4.jpg"),
           title: "珠江新城B1-1",
           ProjectLocation: "广州市天河区珠江新城B1-1地块",
           description:
@@ -114,14 +114,14 @@ export default {
       ], //截取数据的两条
       threeArticle: [
         {
-          cover: "../../../static/Projects/5.jpg",
+          cover: require("../../assets/Projects/5.jpg"),
           title: "中国联通互联网应用创新基地一期工程",
           ProjectLocation: "新广州知识城凤湖一路以南、永九快速路以东地块，",
           description:
             "新技术应用情况：本项目拟推广应用建设部推广应用的“建筑业十项新技术（2017）”中的钢筋与混凝土技术、模板脚手架技术、机电安装工程技术、绿色施工技术、防水技术与围护结构节能、抗震、加固与改造技术、信息化技术等7大项19子项新技术术，并在项目实施过程中按计划加以推进落实。",
         },
         {
-          cover: "../../../static/Projects/6.jpg",
+          cover: require("../../assets/Projects/6.jpg"),
           title: "广州交投建设运营管理中心",
           ProjectLocation: "广州市海珠区新港东路琶洲中二区AH041002地块",
           description:
@@ -193,9 +193,8 @@ export default {
   height: 950px;
   margin: 0 auto;
   position: relative;
-  /* padding-top: 50px; */
-  background: #ffffff6b;
 }
+
 .ProjectsMap_n {
   width: 823px;
   height: 100%;
@@ -214,7 +213,7 @@ export default {
   left: 50%;
   top: 5%;
   /* overflow: hidden; */
-  transition: .5s all;
+  transition: 0.5s all;
   transform: translate(-50%, -5%);
   margin-top: 30px;
   cursor: pointer;
@@ -222,12 +221,11 @@ export default {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
   /* padding: 10px; */
 }
-.project_content{
+.project_content {
   width: 823px;
   height: 390px;
   overflow: hidden;
   border: 10px solid #fff;
-  
 }
 .project_img img {
   max-width: 823px;
@@ -235,7 +233,7 @@ export default {
   width: 100%;
   height: 100%;
   /* object-fit: fill; */
-  transition: .5s all;
+  transition: 0.5s all;
 }
 .project_img img:hover {
   transform: scale(1.1);
@@ -282,7 +280,7 @@ export default {
 }
 .setshow {
   clear: both;
-  transition: .5s all;
+  transition: 0.5s all;
 }
 .ProjectsMap_buttons {
   width: 100%;

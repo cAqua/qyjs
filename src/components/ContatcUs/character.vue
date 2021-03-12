@@ -76,14 +76,14 @@ export default {
   line-height: 50px;
   box-shadow: 12px;
   background: #e6e6e6;
-  color: #965252ba;
+  color: #000000ba;
   border-radius: 10px;
   box-shadow: 0 0 7px #f5f5f5;
   transition: all 0.5;
 }
 .character_txt ul li:hover {
-  cursor: pointer;
-  transform: scale(1.02);
+  /* cursor: pointer; */
+  /* transform: scale(1.02); */
   color: #151414ba;
 }
 .character_address {
@@ -92,7 +92,7 @@ export default {
     top: 30px;
     text-align: center;
     position: relative;
-    color: #965252ba;
+    color: #000000ba;
 }
 .character_address span:nth-child(1) {
   font-size: 22px;

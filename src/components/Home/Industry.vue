@@ -48,24 +48,24 @@ export default {
       Industry: {
           title: "公司简介",
           title_els: "company introduction ",
-          cover:'../../../static/Home/gallery/master.png',
+          cover: require('../../assets/home/gallery/master.png'),
           favnum:'NUlla pellentesque mi non laoreet eleifend . integer prottitor mollisar lorem,at molestie arcu pulvinar ut, Proin ac fermentum est. Cras miipsum,consecterur ac ipsun in,egestas vestibulum tellus.',
           titleText:[
             {
               id:0,
-              icon:'../../../static/Home/gallery/team.png',
+              icon:require('../../assets/home/gallery/team.png'),
               title:'INDUSTRIAL BUSHINESS',
               text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
             },
             {
               id:0,
-              icon:'../../../static/Home/gallery/time.png',
+              icon:require('../../assets/home/gallery/time.png'),
               title:'24/7 support',
               text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
             },
             {
               id:0,
-              icon:'../../../static/Home/gallery/industrial.png',
+              icon:require('../../assets/home/gallery/industrial.png'),
               title:'PROFESSIONAL TEAM',
               text:'Lorem ipsum dolor sit amet aueit,consectetur adipiscing elit . Quisque utrisus eget libero finibus. Etiam males',
             },
@@ -128,8 +128,10 @@ export default {
   overflow: hidden;
 }
 .industs_Picture img {
-  /* width: 100%;
-  height: 100%; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .industs_content_right {
   width: 613px;
@@ -138,7 +140,7 @@ export default {
   position: relative;
   left: -84px;
   top: 38px;
-  border: 5px solid#f85a40;
+  border: 5px solid#1dbb81;
   padding-left: 70px;
   padding-top: 35px;
 }
@@ -167,7 +169,7 @@ export default {
   display: flex;
   float: left;
   margin-right: 10px;
-  background: #f85a40;
+  background: #1dbb81;
   top: 5px;
 }
 .Second_content_ico img {
@@ -175,26 +177,10 @@ export default {
   width: 55px;
   height: 55px;
   line-height: 55px;
-  background: #f85a40;
+  background: #1dbb81;
   color: #fff;
   text-align: center;
-/* .Second_content_ico {
-  width: 55px;
-  height: 55px;
-  position: relative;
-  float: left;
-  margin-right: 10px;
-  background: #f85a40;
-  top: 5px;
-}
-.Second_content_ico img {
-  font-size: 22px;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  background: #f85a40;
-  color: #fff;
-  text-align: center; */
+
 }
 .Second_content_p p {
   width: 445px;

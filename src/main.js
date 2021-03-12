@@ -27,8 +27,8 @@ import vuelazyload from 'vue-lazyload';  //图片预加载
 
 Vue.config.productionTip = false
 Vue.use(vuelazyload,{
-      error: '/static/timg.jpg',
-  　　loading: '/static/timg.gif'   // 图片没加载出来之前显示的图片
+      error: './static/img/timg.jpg',
+  　　loading: './static/img/timg.gif'   // 图片没加载出来之前显示的图片
   })
 /* eslint-disable no-new */
 
